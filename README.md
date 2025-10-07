@@ -11,6 +11,9 @@ PathFactors permet de :
 * Comparer des itinéraires selon des critères personnalisables.
 * Détecter des tendances récurrentes dans les choix de déplacement.
 
+  <img width="1850" height="855" alt="image" src="https://github.com/user-attachments/assets/ed7c4570-5f84-45e8-930d-a060a0d0b096" />
+
+
 ## 📝 Principe :
 tu donnes un CSV, l’app te montre des graphes/tableaux utiles, et tu ajustes tes critères. Basta.
 
