@@ -49,6 +49,3 @@ streamlit run app.py
     └── predictor.py
 
 
-  CSV --> FEAT
-  VIZ --> UI
-  METRICS --> UI
