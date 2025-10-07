@@ -1,29 +1,54 @@
-# PathFactors
+## PathFactors 🧭
 
-Analyse des facteurs sous-jacents influençant le choix des itinéraires.
-Ce projet utilise **Streamlit** pour visualiser les données et identifier les critères clés qui déterminent les trajets optimaux.
+* Analyse (sans prise de tête) des facteurs qui influencent le choix des itinéraires, avec Streamlit pour tout voir en un clin d’œil.
+* Objectif : trouver vite les critères qui rendent un trajet “optimal” (ou au moins pas trop nul) 😴✨
 
----
+## 🧩 Description (court et net)
 
-## Description
+PathFactors permet de :
 
-PathFactors est une application conçue pour explorer et analyser les données liées aux choix d'itinéraires. Elle permet de :
-* Visualiser les facteurs influençant les trajets (trafic, distance, préférences utilisateur, etc.).
-* Comparer différents itinéraires en fonction de critères personnalisables.
-* Identifier les tendances et motifs récurrents dans les choix de déplacement.
+* Visualiser les facteurs clés (trafic, distance, préférences, etc.).
+* Comparer des itinéraires selon des critères personnalisables.
+* Détecter des tendances récurrentes dans les choix de déplacement.
 
----
+## 📝 Principe :
+tu donnes un CSV, l’app te montre des graphes/tableaux utiles, et tu ajustes tes critères. Basta.
 
-## Prérequis
+## 🧱 Prérequis
+- Python 3.8+
+- pip
+- (optionnel) environnement virtuel
 
-Pour exécuter ce projet localement, assurez-vous d'avoir installé :
-* Python 3.8 ou supérieur
-* Pip (gestionnaire de paquets Python)
+## ⚙️ Installation
+git clone https://github.com/dominique-AR/PathFactors.git
+cd PathFactors
+pip install -r requirements.txt
 
----
+# (optionnel) créer/activer un venv
+python -m venv .venv
+.venv\Scripts\activate    # Windows
+source .venv/bin/activate # macOS / Linux
 
-## Installation
+## ▶️ Utilisation
+streamlit run app.py
 
-1. Clonez ce dépôt sur votre machine locale :
-   ```bash
-   git clone https://github.com/dominique-AR/PathFactors.git
+- Ouvrir le navigateur (souvent http://localhost:8501)
+- Charger un CSV (ex. csv/data.csv)
+- Choisir les facteurs à analyser
+- Observer les graphiques et tableaux → ajuster → recommencer
+
+## 🗺️ Diagramme du projet (mermaid, non interprété ici)
+```plaintext
+├── Accueil.py
+├── pages/
+│   ├── 1_Geospatial_Analysis.py
+│   └── 2_XGBoost_SHAP_Analysis.py
+└── utils/
+    ├── data_loader.py
+    ├── routing.py
+    └── predictor.py
+
+
+  CSV --> FEAT
+  VIZ --> UI
+  METRICS --> UI
