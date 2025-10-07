@@ -1,0 +1,10 @@
+# Ignorer tout sauf ce qui est explicitement inclus
+*
+
+# Inclure les fichiers et dossiers suivants
+!.gitignore
+!*.py
+!requirements.txt
+!utils/
+!pages/
+!csv/
